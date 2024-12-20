@@ -1,34 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { createBrowserRouter, createRoutesFromElements, Navigate, Route, RouterProvider } from 'react-router-dom';
+import LoadingWrapper from './components/sheard/LoadingWrapper';
+import Register from './pages/auth/Register';
+import { ROUTE_PATHS } from './core/utilis/constants/routes';
+import MainLayout from './layouts/MainLayout';
+import { useSelector } from 'react-redux';
+import { RootState } from './state-management/store';
+import Login from './pages/auth/Login';
+import CabinetLayout from './layouts/CabinetLayout';
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const { isAuth } = useSelector((store: RootState) => store.userProfileInformation.userProfileInfo)
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <LoadingWrapper>
+      <RouterProvider
+      router={
+        createBrowserRouter(
+          createRoutesFromElements(
+            <Route path={ROUTE_PATHS.HOME} element={<MainLayout/>}>
+              <Route index element={<Register />} />
+              <Route path={ROUTE_PATHS.REGISTER} element={isAuth ? <Navigate to={ROUTE_PATHS.CABINET}/> : <Register />} />
+              <Route path={ROUTE_PATHS.LOGIN} element={isAuth ? <Navigate to={ROUTE_PATHS.CABINET}/> : <Login />} />
+
+              <Route path={ROUTE_PATHS.CABINET} element={isAuth ? <CabinetLayout/> : <Navigate to={ROUTE_PATHS.LOGIN} />}>
+              hi
+              </Route>
+            </Route>
+          )
+        )
+      }
+      >
+      </RouterProvider>
+      </LoadingWrapper>
+    </div>
   )
 }
 
