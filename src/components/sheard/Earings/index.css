@@ -1,0 +1,20 @@
+.earings_container > h5{
+    color: white;
+}
+
+.earings_container > h3{
+    color: rgb(84, 82, 82);
+    margin: 0;
+}
+
+.earings_container{
+    padding: 10px;
+    margin: 0;
+    background-color: black;
+}
+
+.earings_container > a > button{
+    background-color: #FF3D00;
+    border: none;
+    color: white
+}

@@ -1,0 +1,11 @@
+.invite_container{
+    padding: 10px;
+    background-color: black;
+}
+:where(.css-dev-only-do-not-override-1kf000u).ant-typography{
+    text-align: center;
+    color: white
+}
+.invite_container > h4{
+    color: #FF3D00;
+}

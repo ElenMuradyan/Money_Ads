@@ -1,0 +1,16 @@
+.notification_container > h5{
+    color: white;
+    margin:0;
+    padding: 10px;
+}
+.notification_container{
+    padding: 10px;
+    margin-top: 5px;
+    background-color:rgb(84, 82, 82);
+}
+.text{
+    color: rgba(255, 255, 255, 0.423);
+}
+.notifications{
+    background-color:#FF3D00;
+}

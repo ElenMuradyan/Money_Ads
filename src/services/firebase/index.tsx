@@ -1,22 +1,26 @@
 import { initializeApp } from "firebase/app";
-import { getAuth } from 'firebase/auth';
+import { getAuth, GoogleAuthProvider, FacebookAuthProvider } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: "omegashop-67199.firebaseapp.com",
-  projectId: "omegashop-67199",
-  storageBucket: "omegashop-67199.firebasestorage.app",
-  messagingSenderId: "503950051302",
-  appId: "1:503950051302:web:c7a8ba0e158325da11b827",
-  measurementId: "G-DQRW345RF2"
+  authDomain: "z-chatbot-aaae5.firebaseapp.com",
+  projectId: "z-chatbot-aaae5",
+  storageBucket: "z-chatbot-aaae5.firebasestorage.app",
+  messagingSenderId: "196313923587",
+  appId: "1:196313923587:web:f2b4bbb4b924e22ff58e36",
+  measurementId: "G-RNNSFV8LV1"
 };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
+const googleProvider = new GoogleAuthProvider();
+const facebookProvider = new FacebookAuthProvider();
 
 export{
     auth,
-    db
+    db,
+    googleProvider,
+    facebookProvider,
 }

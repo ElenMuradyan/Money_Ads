@@ -1,0 +1,5 @@
+:where(.css-dev-only-do-not-override-1kf000u).ant-btn-variant-solid:not(:disabled):not(.ant-btn-disabled):hover{
+    background-color: #ff3c00bf;
+    border: none;
+    color: white
+}

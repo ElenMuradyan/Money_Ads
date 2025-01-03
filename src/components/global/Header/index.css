@@ -1,0 +1,12 @@
+.header_container{
+    padding: 10px;
+    background-color: rgb(84, 82, 82);
+}
+.avatar_container > h5{
+    margin: 5px;
+    color: #FF3D00
+}
+.icon{
+    font-size: 18px;
+    color: #FF3D00;
+}

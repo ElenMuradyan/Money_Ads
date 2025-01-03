@@ -1,0 +1,9 @@
+.footer{
+    background-color:  rgb(84, 82, 82);;
+}
+.footer > a {
+    color: aliceblue;
+}
+svg{
+    color: rgb(255, 255, 255);
+}

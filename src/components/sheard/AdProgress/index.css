@@ -1,0 +1,32 @@
+.ads_section_container{
+    padding: 30px;
+    background-color:  rgb(84, 82, 82);
+}
+.ad_text > h4{
+    color: white;
+}
+.ad_text > span{
+    color: white;
+}
+:where(.css-dev-only-do-not-override-1kf000u).ant-progress.ant-progress-circle .ant-progress-text{
+    color: #FF3D00;
+}
+.ant-progress-circle:where(.css-dev-only-do-not-override-1kf000u).ant-progress-status-success .ant-progress-text {
+    color: #FF3D00;
+}
+:where(.css-dev-only-do-not-override-1kf000u).ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):hover, :where(.css-dev-only-do-not-override-1kf000u).ant-btn-variant-dashed:not(:disabled):not(.ant-btn-disabled):hover{
+    background-color: #ff3c00bf;
+    border: none;
+    color: white
+}
+:where(.css-dev-only-do-not-override-1kf000u).ant-btn{
+    background-color: #FF3D00;
+    border: none;
+    color: white
+}
+:where(.css-dev-only-do-not-override-1kf000u).ant-progress .ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path{
+    stroke: #FF3D00;
+}
+:where(.css-dev-only-do-not-override-1kf000u).ant-progress.ant-progress-status-success .ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path{
+    stroke: #FF3D00; 
+}
