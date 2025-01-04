@@ -1,8 +1,8 @@
 import { Typography, Form, Input, Button, notification } from "antd";
 import { Link } from "react-router-dom";
 import { ROUTE_PATHS } from "../../../core/utilis/constants/routes";
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "../../../state-management/store";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "../../../state-management/store";
 import { inputValues } from "../../../typescript/interfase/inputValues";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, db, googleProvider } from "../../../services/firebase";
