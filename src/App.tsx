@@ -11,7 +11,6 @@ import { useEffect } from 'react';
 import { fetchUserData } from './state-management/redux/slices/userData';
 import Cabinet from './pages/Cabinet';
 import Notifications from './pages/Notifications';
-import Earings from './components/sheard/Earings';
 import History from './pages/History';
 
 function App() {

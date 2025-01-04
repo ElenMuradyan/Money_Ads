@@ -17,7 +17,6 @@ const { Title } = Typography;
 const Login = () => {
     const [form] = Form.useForm();
     const dispatch = useDispatch<AppDispatch>();
-    const { isAuth } = useSelector((store: RootState) => store.userProfileInformation.userProfileInfo)
 
     const handleGoogleSignUp = async () => {
         const currentDate = new Date();
