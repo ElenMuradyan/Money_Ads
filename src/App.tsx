@@ -12,6 +12,8 @@ import { fetchUserData } from './state-management/redux/slices/userData';
 import Cabinet from './pages/Cabinet';
 import Notifications from './pages/Notifications';
 import History from './pages/History';
+import TermsOfService from './pages/Footer/TermsOfService';
+import PrivacyPolicy from './pages/Footer/PrivacyPolicy';
 
 function App() {
   const { isAuth } = useSelector((store: RootState) => store.userProfileInformation.userProfileInfo);
@@ -42,6 +44,8 @@ function App() {
               <Route index element={<Cabinet />}></Route>
               <Route path={ROUTE_PATHS.NOTIFICATIONS} element={<Notifications />}/>
               <Route path={ROUTE_PATHS.HISTORY} element={<History />}/>
+              <Route path={ROUTE_PATHS.SERVICE} element={<TermsOfService/>}/>
+              <Route path={ROUTE_PATHS.PRIVACYPOLICY} element={<PrivacyPolicy/>}/>
               </Route>
             </Route>
           )

@@ -1,13 +1,15 @@
 import { Flex, Typography } from "antd";
 import { useSelector } from "react-redux";
 import { RootState } from "../../state-management/store";
+import BackToHome from "../../components/sheard/BackToHome";
 
 const { Text, Title } = Typography;
 
 const History = () => {
     const { history } = useSelector((store: RootState) => store.userProfileInformation.userProfileInfo.adsInformation)
     return (
-        <Flex>
+        <Flex align="center" justify="center">
+            <BackToHome/>
             {history.map(item => {
                 return(
                     <div>

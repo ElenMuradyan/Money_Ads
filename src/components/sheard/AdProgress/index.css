@@ -1,6 +1,7 @@
 .ads_section_container{
     padding: 30px;
-    background-color:  rgb(84, 82, 82);
+    background-color: black;
+    border: 5px solid #FF3D00;
 }
 .ad_text > h4{
     color: white;
@@ -8,25 +9,44 @@
 .ad_text > span{
     color: white;
 }
-:where(.css-dev-only-do-not-override-1kf000u).ant-progress.ant-progress-circle .ant-progress-text{
-    color: #FF3D00;
-}
-.ant-progress-circle:where(.css-dev-only-do-not-override-1kf000u).ant-progress-status-success .ant-progress-text {
-    color: #FF3D00;
-}
-:where(.css-dev-only-do-not-override-1kf000u).ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):hover, :where(.css-dev-only-do-not-override-1kf000u).ant-btn-variant-dashed:not(:disabled):not(.ant-btn-disabled):hover{
-    background-color: #ff3c00bf;
-    border: none;
-    color: white
-}
-:where(.css-dev-only-do-not-override-1kf000u).ant-btn{
-    background-color: #FF3D00;
-    border: none;
-    color: white
-}
-:where(.css-dev-only-do-not-override-1kf000u).ant-progress .ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path{
+.progress_container > circle{
     stroke: #FF3D00;
 }
-:where(.css-dev-only-do-not-override-1kf000u).ant-progress.ant-progress-status-success .ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path{
-    stroke: #FF3D00; 
+
+.progress_container > circle {
+    stroke: #FF3D00;  
+    stroke-width: 5px;    
+    fill: none;        
+}
+  
+.ant-progress-circle.ant-progress-status-success .ant-progress-text {
+    color: #FF3D00;
+}
+
+.ant-progress.ant-progress-circle .ant-progress-text {
+    color: #FF3D00;
+}
+
+.css-dev-only-do-not-override-1kf000u.ant-progress .ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path {
+    stroke: #FF3D00;
+}
+.ant-btn {
+    background-color: #FF3D00;
+    border: none;
+    color: white;
+}
+.ant-btn-variant-outlined.ant-btn:not(:disabled):not(.ant-btn-disabled):hover,
+.ant-btn-variant-dashed.ant-btn:not(:disabled):not(.ant-btn-disabled):hover {
+    background-color: #ff3c00bf;
+    border: none;
+    color: white;
+}
+
+@media (max-width: 550px) {
+    .ads_section_container{
+        border: none;
+        flex-direction: column;
+        gap: 10px;
+        border-bottom: solid #FF3D00;
+    }
 }

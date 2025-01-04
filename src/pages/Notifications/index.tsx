@@ -5,6 +5,7 @@ import { fetchNotifications } from "../../state-management/redux/slices/notifica
 import { Flex, Typography } from "antd";
 
 import './index.css';
+import BackToHome from "../../components/sheard/BackToHome";
 
 const { Text, Title } = Typography;
 
@@ -18,6 +19,7 @@ const Notifications = () => {
 
     return(
         <Flex className="notifications" vertical> 
+        <BackToHome/>
             {notifications.map(item => {                
                 return(
                     <div className="notification_container">

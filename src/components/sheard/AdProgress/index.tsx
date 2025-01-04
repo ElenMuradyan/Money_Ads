@@ -17,7 +17,7 @@ const AdProgress = () => {
             <Text>Watched {adNumber}/50 ads today</Text>
             </Flex>
             <Flex gap="small" wrap align="center" vertical className="progress_container">
-                <Progress type="circle" percent={percent} format={(percent) => `${percent} %`} />
+                <Progress type="circle" percent={percent} format={(percent) => `${percent} %`} className="progress"/>
                 <Button>Watch An Ad</Button>
             </Flex>
         </Flex>

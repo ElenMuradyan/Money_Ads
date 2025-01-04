@@ -1,0 +1,19 @@
+.container > h4, .container > h3, .container > h5{
+    text-align: start;
+    color: #FF3D00;
+    margin: 0;
+}
+.container > span{
+    margin: 0;
+    text-align: start;
+}
+.container{
+    background-color: black;
+    padding: 20px;
+}
+.container > a > h4 {
+    color: #FF3D00;
+}
+.container > a > h4:hover {
+    color: #ff3c00a3;
+}
