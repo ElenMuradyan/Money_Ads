@@ -9,3 +9,9 @@
 .invite_container > h4{
     color: #FF3D00;
 }
+
+@media (max-width: 550px) {
+    .button-container{
+        flex-direction: column;
+    }
+}
