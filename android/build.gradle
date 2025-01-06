@@ -4,11 +4,12 @@ buildscript {
     
 repositories {
     jcenter()
+    google()
     maven {
         url "https://maven.pkg.github.com/ionic-team/capacitor"
         credentials {
-            username = "ElenMuradyan"
-            password = System.getenv("VITE_GITHUB_SECRET") 
+            username = System.getenv("GITHUB_USERNAME")
+            password = System.getenv("GITHUB_TOKEN")
         }
     }
 }
